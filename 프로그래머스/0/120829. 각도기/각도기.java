@@ -1,14 +1,9 @@
 class Solution {
     public int solution(int angle) {
-        int answer = 0;
-        if(angle<90) 
-            return 1;
-        if(angle==90)
-            return 2;
-        if(angle<180)
-            return 3;
-        if(angle==180)
-            return 4;
-        return answer;
+        return angle == 180
+            ? 4 : angle < 90 
+                ? 1 : angle == 90 
+                    ? 2 : angle > 90 
+                        ? 3 : 0;
     }
 }
