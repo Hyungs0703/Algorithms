@@ -1,6 +1,6 @@
 class Solution {
     public String solution(String myString) {
-        String answer = myString.toLowerCase();
-        return answer.replace("a", "A");
+        return myString.toLowerCase().replace("a", "A");
+        
     }
 }
