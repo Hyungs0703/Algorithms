@@ -1,11 +1,11 @@
-import java.util.stream.IntStream;
+import java.util.*;
 
 class Solution {
     public int[] solution(int[] num_list, int n) {
+        int[] result = {};
         
-        return IntStream.range(0, num_list.length)
-            .filter(i -> i < n)
-            .map(i -> num_list[i])
-            .toArray();
+        result = Arrays.copyOfRange(num_list, 0, n);
+        
+        return result;
     }
 }
