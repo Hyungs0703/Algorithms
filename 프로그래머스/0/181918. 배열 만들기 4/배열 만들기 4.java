@@ -1,15 +1,14 @@
-import java.util.List;
-import java.util.ArrayList;
+import java.util.Stack;
 
 class Solution {
     public int[] solution(int[] arr) {
-        List<Integer> stk = new ArrayList<>();
+        Stack<Integer> stk = new Stack<>();
         
         for(int num : arr) {
-            while(!stk.isEmpty() && stk.get(stk.size() - 1) >= num) {
-                stk.remove(stk.size() - 1);
+            while(!stk.isEmpty() && stk.peek() >= num) {
+                stk.pop();
             }
-            stk.add(num);
+            stk.push(num);
         }
         
         return stk.stream()
